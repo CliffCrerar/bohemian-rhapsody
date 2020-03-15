@@ -1,0 +1,22 @@
+{
+  "name": "bohemian-rhapsody",
+  "version": "1.0.0",
+  "description": "![](https://raw.githubusercontent.com/CliffCrerar/bohemian-rhapsody/master/5B546FEE-069F-4D16-8CF0-42412B1E0442.jpeg)",
+  "dependancies": {
+    "dev:run": "ocker run --rm -d  -p 3000:8080/tcp cliffenator/express-docker-app:latest",
+    "build:docker": "docker image build ./docker-app -t cliffenator/express-docker-app:latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CliffCrerar/bohemian-rhapsody.git"
+  },
+  "author": "Cliff Crerar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CliffCrerar/bohemian-rhapsody/issues"
+  },
+  "homepage": "https://github.com/CliffCrerar/bohemian-rhapsody#readme"
+}
