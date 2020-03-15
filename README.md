@@ -10,3 +10,8 @@ About this application
 
 1. Nodejs
 2. Docker desktop
+3. Docker hub account
+
+npm i mysql
+
+docker run --privileged -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=b0h3m1an-5a7so8y' -p 1433:1433 --name=MSSQL -d mcr.microsoft.com/mssql/server:2019-latest
