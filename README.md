@@ -4,4 +4,9 @@
 
 About this application
 
-A full stack demo app
+## To run this app
+
+### Prerequisites
+
+1. Nodejs
+2. Docker desktop
