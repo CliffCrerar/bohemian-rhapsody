@@ -1,1 +1,3 @@
 FROM cliffenator/sql-express-dev-server:latest
+
+RUN ''

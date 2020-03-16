@@ -11,6 +11,10 @@ docker run --env-file .secret -p 1433:1433 -d mcr.microsoft.com/mssql/server:201
 
 gcloud run deploy express --image cliffenator/sql-express-dev-server:latest --allow-unauthenticated
 
+gcloud builds submit --tag gcr.io/boraps/sql-express-server
+
+gcloud run deploy express --image cliffenator/sql-express-dev-server:latest --allow-unauthenticated
+
 ----------------------------
 
 https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver15
