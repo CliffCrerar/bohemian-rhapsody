@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pulldbserver":"docker pull mysql:latest",
-    "start:server":"cd app-server && npm start",
-    "start:app":"cd app-ui && npm start"
-    
-    
+    "pulldbserver": "docker pull mysql:latest",
+    "start:server": "cd app-server && npm start",
+    "start:app": "cd app-ui && npm start",
+    "connected":"node ./mssql-docker/test-connection"
   },
   "repository": {
     "type": "git",
@@ -18,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/CliffCrerar/bohemian-rhapsody/issues"
   },
-  "homepage": "https://github.com/CliffCrerar/bohemian-rhapsody#readme"
+  "homepage": "https://github.com/CliffCrerar/bohemian-rhapsody#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mssql": "^6.2.0"
+  }
 }
