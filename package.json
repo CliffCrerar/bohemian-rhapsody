@@ -20,8 +20,8 @@
   "homepage": "https://github.com/CliffCrerar/bohemian-rhapsody#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "mssql": "^6.2.0",
-    "app": "file:./app-ui",
-    "api": "file:./app-server"
+    "mssql": "^6.2.0"
+    
+
   }
 }

@@ -16,3 +16,16 @@ About this application
 npm i mysql
 
 docker run --privileged -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=b0h3m1an-5a7so8y' -p 1433:1433 --name=MSSQL -d mcr.microsoft.com/mssql/server:2019-latest
+
+cmd connect mongo "mongodb+srv://google-mongo-2pvom.mongodb.net/test"  --username <username>
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://<username>:<password>@google-mongo-2pvom.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+mongodb+srv://<username>:<password>@google-mongo-2pvom.mongodb.net/test?retryWrites=true&w=majority
