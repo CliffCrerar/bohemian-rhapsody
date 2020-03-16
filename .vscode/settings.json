@@ -1,3 +1,6 @@
 {
-    "docker.defaultRegistryPath": "cliffenator"
+    "docker.defaultRegistryPath": "cliffenator",
+    "cSpell.words": [
+        "Microservice"
+    ]
 }

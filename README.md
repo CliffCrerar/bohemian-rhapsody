@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/CliffCrerar/bohemian-rhapsody/master/5B546FEE-069F-4D16-8CF0-42412B1E0442.jpeg)
+![](https://raw.githubusercontent.com/CliffCrerar/bohemian-rhapsody/master/bhpic.jpeg)
 
 # A full stack demo application
 
@@ -11,6 +11,7 @@ About this application
 1. Nodejs
 2. Docker desktop
 3. Docker hub account
+4. Azure CLI
 
 npm i mysql
 
