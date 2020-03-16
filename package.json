@@ -6,7 +6,7 @@
     "pulldbserver": "docker pull mysql:latest",
     "start:server": "cd app-server && npm start",
     "start:app": "cd app-ui && npm start",
-    "connected":"node ./mssql-docker/test-connection"
+    "connected": "node ./mssql-docker/test-connection"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,8 @@
   "homepage": "https://github.com/CliffCrerar/bohemian-rhapsody#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "mssql": "^6.2.0"
+    "mssql": "^6.2.0",
+    "app": "file:./app-ui",
+    "api": "file:./app-server"
   }
 }
