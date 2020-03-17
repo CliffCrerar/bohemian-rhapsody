@@ -11,17 +11,18 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2018",
-    "types": ["express","node","mongoose","custom"],
+    "composite": false,
     "typeRoots": [
-      "node_modules/@types",
-      "@types/custom"
+      "node_modules/@types"
     ],
     "allowSyntheticDefaultImports": true,
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "types": ["custom","node","express"]
   },
+  
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true

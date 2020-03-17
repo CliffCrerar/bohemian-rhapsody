@@ -4,7 +4,7 @@
 
 import * as express from 'express';
 import {Express} from 'express';
-import './src/api/data/index';
+import './src/api/napster';
 
 import { usersRouter } from './src/api/routes';
 

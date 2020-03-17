@@ -15,7 +15,7 @@ About this application
 
 npm i mysql
 
-docker run --privileged -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=b0h3m1an-5a7so8y' -p 1433:1433 --name=MSSQL -d mcr.microsoft.com/mssql/server:2019-latest
+docker run --privileged -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<>' -p 1433:1433 --name=MSSQL -d mcr.microsoft.com/mssql/server:2019-latest
 
 cmd connect mongo "mongodb+srv://google-mongo-2pvom.mongodb.net/test"  --username <username>
 
