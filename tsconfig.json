@@ -1,19 +1,21 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "experimentalDecorators": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2018",
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "@types/custom"
     ],
+    "allowSyntheticDefaultImports": true,
     "lib": [
       "es2018",
       "dom"
@@ -22,5 +24,8 @@
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  }
+  },
+  "include": [
+    "src/**/*.d.ts"
+  ]
 }
