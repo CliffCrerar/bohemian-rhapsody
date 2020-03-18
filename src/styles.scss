@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+.body,
+.html {
+  min-height: 100vh;
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}

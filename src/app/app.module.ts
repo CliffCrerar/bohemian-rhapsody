@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppLoginComponent } from './components/app-login/app-login.component';
 import { AppLandingComponent } from './components/app-landing/app-landing.component'
-
+import { CardModule } from 'primeng/card';
 @NgModule({
     declarations: [
         AppComponent,
