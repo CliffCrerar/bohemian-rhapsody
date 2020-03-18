@@ -3,15 +3,11 @@
  */
 /// <reference path="index.d.ts" />
 
-// import * as express from 'express';
-import * as env from 'dotenv';
 import * as https from 'https';
 import { baseDecode } from '../sec';
 import { IncomingMessage } from 'http';
-env.config();
 
 const
-    // Nabster = express.Router(),
     conf = {
         NabsterResource: 'https://api.napster.com',
         ApiVersion: 'v2.2'
@@ -32,16 +28,6 @@ const
             callBack(err);
         }
     };
-
-// Nabster.route('/')
-//   .all((req, res, next) => {
-
-//     console.log('req.params: ', req.params);
-//     console.log('called path ', req.path);
-//     // const reqPath = req.path;
-//     res.status(200).send(req.path);
-
-//   });
 
 
 export { NabsterGet };

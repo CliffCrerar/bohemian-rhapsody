@@ -1,0 +1,10 @@
+Dockerfile
+README.md
+node_modules
+npm-debug.log
+dist
+.wiki
+.github
+.git
+.vscode
+.env

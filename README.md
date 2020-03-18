@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/CliffCrerar/bohemian-rhapsody/master/bhpic.jpeg)
+![](https://raw.githubusercontent.com/CliffCrerar/bohemian-rhapsody/master/src/assets/img/bhpic.jpeg)
 
 # A full stack demo application
 

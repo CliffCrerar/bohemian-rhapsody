@@ -8,10 +8,18 @@ const PROXY_CONFIG = [
             '/api'
         ],
         target: 'http://localhost:3000',
+    },
+    {
+        context: [
+            '/',
+            'login'
+        ],
+        target: 'http://localhost:3000',
     }
-].map(conf=>({...conf,
+].map(conf => ({
+    ...conf,
     secure: false,
-    pathRewrite: {'^/api/*': '/*'},
+    pathRewrite: { '^/api/*': '/*' },
     changeOrigin: true
 }))
 
