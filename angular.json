@@ -10,13 +10,14 @@
           "style": "scss"
         }
       },
-      "root": "",
+      "root": ".",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            
             "outputPath": "dist/app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -31,6 +32,7 @@
               "src/styles.scss"
             ],
             "scripts": []
+            
           },
           "configurations": {
             "production": {
@@ -60,17 +62,26 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "stage":{
+              "optimization": false,
+              "aot": true,
+              "sourceMap": true,
+              "verbose": true,
+              "progress": true
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "app:build"
+            "browserTarget": "app:build",
+            "proxyConfig": "proxy.conf.js"
           },
           "configurations": {
             "production": {
-              "browserTarget": "app:build:production"
+              "browserTarget": "app:build:production",
+              "proxyConfig": "proxy.conf.js"
             }
           }
         },

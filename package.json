@@ -4,7 +4,7 @@
   "main": "index.ts",
   "scripts": {
     "ng": "ng",
-    "app": "ng serve",
+    "dev:app": "ng serve --prod=false --commonChunk=false --hmr=true --open=true --optimization=false --proxyConfig=src/proxy-config.js --sourceMap=true --verbose=true",
     "build": "ng build",
     "test:app": "ng test",
     "lint": "ng lint",
@@ -26,6 +26,8 @@
     "@angular/platform-browser-dynamic": "~9.0.6",
     "@angular/router": "~9.0.6",
     "@types/http-server": "^0.10.0",
+    "@types/moment": "^2.13.0",
+    "@types/moment-timezone": "^0.5.12",
     "dotenv": "^8.2.0",
     "moment": "^2.24.0",
     "normalize-port": "^1.0.0",
