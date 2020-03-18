@@ -10,23 +10,32 @@ console.log(moment().format('DD MM YYYY - HH:mm:ss'));
 
 const
     { join } = path,
-    { createReadStream, createWriteStream, existsSync, writeFileSync } = fs,
+    { createReadStream, WriteStream, createWriteStream, existsSync, writeFileSync } = fs,
     logFile = `log-${moment().format('DD-MM-YYY_HH-mm-ss')}`,
-    rStream = createWriteStream(join(__dirname, logFile), 'utf8');
+    wStream = createWriteStream(join(__dirname, logFile));
 
-console.log('rStream: ', rStream);
+// console.log('rStream: ', wStream);
 
-process.stdin.pipe(rStream);
+process.stdin.pipe(wStream);
 
-process.stdout.pipe(rStream);
+process.stdout.pipe(wStream);
 
-process.stderr.pipe(rStream);
+process.stderr.pipe(wStream);
 
 process.on('uncaughtException', (err) => {
     console.error(err.name);
     console.error(err.message);
 });
 
-process.on('exit', () => rStream.on())
+process.on('exit', () => wStream.close());
+
+wStream.on('open', (fd) => {
+    console.log('Write Stream is now open');
+    console.log(fd);
+});
+
+wStream.on('error', (err) => console.error('WRITE STREAM ERR', err));
+
+export { wStream };
 
 

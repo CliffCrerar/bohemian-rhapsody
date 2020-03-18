@@ -28,6 +28,7 @@
         "strictInjectionParameters": true
     },
     "include": [
-        "src/**/*.d.ts"
+        "src/**/*.d.ts",
+        "src/api/routes/index.ts"
     ]
 }
