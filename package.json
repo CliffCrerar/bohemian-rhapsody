@@ -4,7 +4,7 @@
   "main": "index.ts",
   "scripts": {
     "ng": "ng",
-    "dev:app": "ng serve --prod=false --commonChunk=false --hmr=true --open=true --optimization=false --proxyConfig=src/proxy-config.js --sourceMap=true --verbose=true",
+    "dev:app": "ng serve --aot=true --prod=false --commonChunk=false --hmr=true --open=true --optimization=false --proxyConfig=src/proxy-config.js --sourceMap=true --verbose=false",
     "build": "ng build",
     "test:app": "ng test",
     "lint": "ng lint",
@@ -14,7 +14,7 @@
   },
   "private": true,
   "nodemonConfig": {
-    "delay": "2500"
+    "delay": "1500"
   },
   "dependencies": {
     "@angular/animations": "~9.0.6",

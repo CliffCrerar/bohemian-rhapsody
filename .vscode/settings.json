@@ -2,5 +2,8 @@
     "docker.defaultRegistryPath": "cliffenator",
     "cSpell.words": [
         "Microservice"
-    ]
+    ],
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "importCost.showCalculatingDecoration": true,
+    "editor.formatOnSave": true
 }
