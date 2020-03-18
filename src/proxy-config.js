@@ -5,15 +5,14 @@
 const PROXY_CONFIG = [
     {
         context: [
-            "/api"
+            '/api'
         ],
-        target: "http://localhost:3000",
-        "secure": false,
-        "pathRewrite": {
-          "^/api": ""
-        },
-        "changeOrigin": true
+        target: 'http://localhost:3000',
     }
-]
+].map(conf=>({...conf,
+    secure: false,
+    pathRewrite: {'^/api/*': '/*'},
+    changeOrigin: true
+}))
 
 module.exports = PROXY_CONFIG;
