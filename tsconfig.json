@@ -11,7 +11,7 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "importHelpers": true,
-        "target": "ESNext",
+        "target": "es2015",
         "composite": false,
         "typeRoots": [
             "node_modules/@types"
