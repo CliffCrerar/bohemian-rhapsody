@@ -1,3 +1,0 @@
-/**
- * Database access index
- */

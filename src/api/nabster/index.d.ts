@@ -1,17 +1,12 @@
-/**
- * Mongoose ORM
- */
+// import * as conf from './config.json';
 
-// declare type ApiKey  = { apikey: string }
+declare type ApiKey = { apikey: string }
 
-// declare interface HttpGetHeaders {headers: ApiKey;}
+declare interface HttpGetHeaders { headers: ApiKey; }   
 
-declare type ApiKey  = { apikey: string }
-
-declare interface HttpGetHeaders {headers: ApiKey;}
-
-declare module Napster {
-    const ApiKey:ApiKey;
-    const HttpGetHeaders:HttpGetHeaders;
-    export {ApiKey,HttpGetHeaders}
+declare module 'nabster' {
+    
+    const HttpGetHeaders: HttpGetHeaders;
+    const ApiKey: ApiKey;
+    export {HttpGetHeaders,ApiKey}
 }

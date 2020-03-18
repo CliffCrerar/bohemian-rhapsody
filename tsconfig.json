@@ -1,8 +1,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "resolveJsonModule": true,
     "experimentalDecorators": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -19,8 +20,7 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "types": ["custom","node","express"]
+    ]
   },
   
   "angularCompilerOptions": {
