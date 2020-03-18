@@ -1,5 +1,5 @@
 /**
- * Albums
+ * Albums routes
  */
 
 

@@ -1,33 +1,33 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "resolveJsonModule": true,
-    "experimentalDecorators": true,
-    "baseUrl": ".",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "ESNext",
-    "composite": false,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "allowSyntheticDefaultImports": true,
-    "lib": [
-      "es2018",
-      "dom"
+    "compileOnSave": false,
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "outDir": "./dist/out-tsc",
+        "sourceMap": true,
+        "declaration": false,
+        "downlevelIteration": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "target": "ESNext",
+        "composite": false,
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "allowSyntheticDefaultImports": true,
+        "lib": [
+            "es2018",
+            "dom"
+        ]
+    },
+    "angularCompilerOptions": {
+        "enableIvy": true,
+        "fullTemplateTypeCheck": true,
+        "strictInjectionParameters": true
+    },
+    "include": [
+        "src/**/*.d.ts"
     ]
-  },
-  "angularCompilerOptions": {
-    "enableIvy": true,
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  },
-  "include": [
-    "src/**/*.d.ts"
-  ]
 }

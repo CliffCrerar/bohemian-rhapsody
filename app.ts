@@ -6,12 +6,13 @@ import * as express from 'express';
 import { Express, Request, Response, NextFunction } from 'express';
 import { Nabster } from './src/api/nabster/index';
 import moment from 'moment';
+import './src/api/logs/index';
 
 const app: Express = express();
 
 app.all('*', logger);
 
-app.use('/nabster',Nabster);
+app.use('/nabster', Nabster);
 
 // app.all('/users', usersRouter);
 // app.all('/albums', albumsRouter);

@@ -2,11 +2,11 @@
 
 declare type ApiKey = { apikey: string }
 
-declare interface HttpGetHeaders { headers: ApiKey; }   
+declare interface HttpGetHeaders { headers: ApiKey; }
 
 declare module 'nabster' {
-    
+
     const HttpGetHeaders: HttpGetHeaders;
     const ApiKey: ApiKey;
-    export {HttpGetHeaders,ApiKey}
+    export { HttpGetHeaders, ApiKey }
 }
