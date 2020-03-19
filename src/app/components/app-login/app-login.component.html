@@ -12,18 +12,20 @@
                 </div>
                 <hr class="uk-divider-icon">
                 <!-- FORM -->
-                <form class="uk-form-stacked">
+                <form>
                     <div class="uk-margin">
                         <div class="uk-inline uk-width-expand">
                             <!-- INPUT USERNAME -->
                             <span
                                 class="uk-form-icon"
-                                uk-icon="icon: user"
-                            ></span>
+                                uk-icon="icon: user"></span>
                             <input
+                                ngClass="uk-form-danger"
+                                (focus)="setUserNameInvalid(false)"
+                                (blur)="onInputBlur('username')"
                                 id="username"
                                 name="username"
-                                class="uk-input"
+                                class="uk-input uk-form-danger"
                                 type="text"
                                 placeholder="Username"
                                 required
@@ -37,9 +39,11 @@
                             <!-- INPUT PASSWORD -->
                             <span
                                 class="uk-form-icon uk-form-icon"
-                                uk-icon="icon: lock"
-                            ></span>
+                                uk-icon="icon: lock"></span>
                             <input
+                                [ngClass]="display.passwordDanger"
+                                (focus)="setUserPasswordInvalid(false)"
+                                (blur)="onInputBlur('password')"
                                 id="password"
                                 name="password"
                                 class="uk-input"

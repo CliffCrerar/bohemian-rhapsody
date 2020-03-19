@@ -5,18 +5,37 @@ import { Observable, of as observableOf, throwError } from 'rxjs';
 import { HttpService } from './http.service';
 import { HttpClient, HttpClientModule, HttpHandler, HttpRequest, HttpEvent, HttpResponse } from '@angular/common/http';
 
-// xdescribe('HttpService', () => {
-//     let service: HttpService;
+describe('HttpService', () => {
+    let service: HttpService;
 
-//     beforeEach(() => {
-//         TestBed.configureTestingModule({});
-//         service = TestBed.inject(HttpService);
-//     });
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [HttpClientModule],
+            providers: [HttpClient]
+        });
+        service = TestBed.inject(HttpService);
+    });
 
-//     it('should be created', () => {
-//         expect(service).toBeTruthy();
-//     });
-// });
+    it('Should be created', () => {
+        expect(service).toBeTruthy();
+    });
+
+    it('Should have a post method', () => {
+        expect(service.post).toBeTruthy();
+    });
+
+    it('Should have a get method', () => {
+        expect(service.get).toBeTruthy();
+    });
+
+    it('Should have a delete method', () => {
+        expect(service.delete).toBeTruthy();
+    });
+
+    it('Should have a put method', () => {
+        expect(service.put).toBeTruthy();
+    });
+});
 
 
 
@@ -32,26 +51,6 @@ describe('HttpService', () => {
     const http = new HttpClient(new MockHttpClient());
     beforeEach(() => {
         service = new HttpService(http);
-    });
-
-    it('should be created', () => {
-        expect(service).toBeTruthy();
-    });
-
-    it('Should have a post method', () => {
-        expect(service.post).toBeTruthy();
-    });
-
-    it('Should have a post method', () => {
-        expect(service.get).toBeTruthy();
-    });
-
-    it('Should have a post method', () => {
-        expect(service.delete).toBeTruthy();
-    });
-
-    it('Should have a post method', () => {
-        expect(service.put).toBeTruthy();
     });
 
 });

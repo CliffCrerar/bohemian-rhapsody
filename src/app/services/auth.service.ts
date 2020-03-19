@@ -10,10 +10,12 @@ export class AuthService {
     constructor(private http: HttpService) { }
 
     public authenticateUser(credentials: AppLoginForm) {
-
         credentials.password = btoa(credentials.password);
-
+        credentials.password = null;
     }
 
+    postCredentials(credentials: AppLoginForm) {
+        this.http.post('/users', credentials).subscribe(res => console.log(res))
+    }
 
 }

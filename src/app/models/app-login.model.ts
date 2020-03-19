@@ -17,6 +17,8 @@ export class AppLoginModel {
         public btnCaption: string,
         public subTitle: string,
         public loginLoader: boolean,
-        public loginForm: AppLoginForm
+        public loginForm: AppLoginForm,
+        public userNameDanger: string,
+        public passwordDanger: string
     ) { }
 }

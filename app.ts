@@ -17,23 +17,14 @@ const
     app: Express = express(),
     staticApp = express.static,
     { resolve } = path;
-// session = cookieSession({
-//     name: 'borap',
-//     keys: ['asdasdasdqefwrgfewtheryhw']
-// });
-// {session} = expSession;
-
 
 app.set('trust proxy', 1);
-
 app.use(cookieParser());
 app.use(cookieSession({
     name: 'session',
     keys: ['key1', 'key2']
 }));
 
-// console.log('app.defaultConfiguration: ', app);
-// app.use('/', staticApp(resolve('dist/app')));
 app.use('*', logger);
 app.use('/users', usersRouter);
 app.use('/albums', albumsRouter);
@@ -50,12 +41,9 @@ function logger(req: Request, res: Response, next: NextFunction) {
     console.log('COOKIES:', req.signedCookies);
     console.dir('PATH:', req.path);
 
-
-
     if (['/', '/login'].includes(req.path)) {
         res.redirect(req.path);
     } else {
         next();
     }
-
 }
