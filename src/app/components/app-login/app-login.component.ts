@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AppLoginModel, AppLoginForm } from '../../models/app-login.model';
-import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -8,7 +7,7 @@ import { AuthService } from '../../services/auth.service';
     templateUrl: './app-login.component.html',
     styleUrls: ['./app-login.component.scss']
 })
-export class AppLoginComponent implements OnInit {
+export class AppLoginComponent implements OnInit, OnDestroy {
     /* Attributes */
     private _appTitle = 'Bohemian Rhapsody';
     private _loginBoxHeading = 'Login';
@@ -17,8 +16,9 @@ export class AppLoginComponent implements OnInit {
     private _subTitle = 'Music Demo App';
     public display: AppLoginModel;
     public loginForm: AppLoginForm;
+
     /* Constructor */
-    constructor(http: HttpClient, auth: AuthService) {
+    constructor(private auth: AuthService) {
         this.loginForm = new AppLoginForm(null, null);
         this.display = new AppLoginModel(
             this._appTitle,
@@ -28,14 +28,15 @@ export class AppLoginComponent implements OnInit {
             this._loginLoader,
             this.loginForm
         );
-        auth.httpPost = http.post;
     }
 
     /* Hooks */
     ngOnInit(): void {
 
     }
+    ngOnDestroy() {
 
+    }
 
     /* Methods */
 
@@ -43,6 +44,5 @@ export class AppLoginComponent implements OnInit {
     ngOnSubmit(ev: HTMLElementEventMap) {
         console.log(ev);
         console.log('this.loginForm: ', this.loginForm);
-
     }
 }
