@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./app-login.component.scss']
 })
 export class AppLoginComponent implements OnInit {
-
+    public appTitle = 'Bohemian Rhapsody';
     constructor() { }
 
     ngOnInit(): void {

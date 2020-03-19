@@ -2,8 +2,13 @@
     "docker.defaultRegistryPath": "cliffenator",
     "cSpell.words": [
         "Microservice",
+        "assets",
+        "css",
+        "lib",
         "nabster",
-        "primeng"
+        "primeng",
+        "src",
+        "uikit"
     ],
     "javascript.implicitProjectConfig.experimentalDecorators": true,
     "importCost.showCalculatingDecoration": true,

@@ -5,3 +5,29 @@
 .login-card {
   margin: auto;
 }
+
+.login-bg {
+  height: 100vh;
+  width: 100vw;
+}
+
+.uk-card {
+  margin: auto;
+  max-width: 340px;
+  min-width: 340px;
+}
+
+.uk-container-xsmall {
+  margin: auto;
+}
+
+@media screen and (min-width: 500xp) {
+  img.uk-cover-container {
+    display: none !important;
+  }
+}
+
+.align-center {
+  margin-top: 20px;
+  text-align: center;
+}

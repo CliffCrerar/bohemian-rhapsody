@@ -1,9 +1,63 @@
 <!-- LOGIN PAGE TEMPLATE -->
-<p>app-login works!</p>
+<main class="uk-background-muted login-bg">
+    <div
+        class="uk-alert-primary"
+        uk-alert
+    >
+        <a
+            class="uk-alert-close"
+            uk-close
+        ></a>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+        </p>
+    </!-->
+    <div class="uk-container-xsmall  uk-padding-large">
+        <h1>{{appTitle}}</h1>
+        <div class="uk-card uk-card-secondary">
 
-<div>
-    <form>
-        <input placeholder="Username">
-        <input placeholder="Password">
-    </form>
-</div>
+            <div class="uk-card-body">
+
+                <div class="uk-card-title">
+                    <h1>Login</h1>
+                </div>
+                <hr class="uk-divider-icon">
+                <form class="uk-form-stacked">
+                    <div class="uk-margin">
+                        <div class="uk-inline uk-width-expand">
+                            <span
+                                class="uk-form-icon"
+                                uk-icon="icon: user"
+                            ></span>
+                            <input
+                                class="uk-input"
+                                type="text"
+                                placeholder="Username"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <div class="uk-inline uk-width-expand">
+                            <span
+                                class="uk-form-icon uk-form-icon"
+                                uk-icon="icon: lock"
+                            ></span>
+                            <input
+                                class="uk-input"
+                                type="password"
+                                placeholder="Password"
+                            >
+                        </div>
+                    </div>
+                    <button class="uk-button uk-width-expand uk-button-default">Login</button>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="align-center">
+            <div uk-spinner></div>
+        </div>
+    </div>
+</main>
