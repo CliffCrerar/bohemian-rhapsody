@@ -18,8 +18,7 @@
                             <!-- INPUT USERNAME -->
                             <span
                                 class="uk-form-icon"
-                                uk-icon="icon: user"
-                            ></span>
+                                uk-icon="icon: user"></span>
                             <input
                                 id="username"
                                 name="username"
@@ -37,8 +36,7 @@
                             <!-- INPUT PASSWORD -->
                             <span
                                 class="uk-form-icon uk-form-icon"
-                                uk-icon="icon: lock"
-                            ></span>
+                                uk-icon="icon: lock"></span>
                             <input
                                 id="password"
                                 name="password"
@@ -52,6 +50,7 @@
                     </div>
                     <button
                         type="button"
+                        (click)="ngOnSubmit($event)"
                         class="uk-button uk-width-expand uk-button-default"
                     >
                         {{display.btnCaption}}
@@ -68,5 +67,9 @@
         <div class="uk-text-right uk-margin-small-top">
             <h2 class="text-light">{{display.subTitle}}</h2>
         </div>
+        <diV>
+            TEST:
+            <span [innerText]="loginForm.username"></span>
+        </diV>
     </div>
 </main>

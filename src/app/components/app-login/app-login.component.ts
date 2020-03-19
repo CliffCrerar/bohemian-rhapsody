@@ -40,7 +40,9 @@ export class AppLoginComponent implements OnInit {
     /* Methods */
 
 
-    ngOnSubmit() {
+    ngOnSubmit(ev: HTMLElementEventMap) {
+        console.log(ev);
+        console.log('this.loginForm: ', this.loginForm);
 
     }
 }
