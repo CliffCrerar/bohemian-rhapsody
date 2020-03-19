@@ -7,6 +7,7 @@ describe('AppLoginComponent', () => {
     let component: AppLoginComponent;
     let fixture: ComponentFixture<AppLoginComponent>;
 
+
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [AppLoginComponent]
@@ -41,5 +42,16 @@ describe('AppLoginComponent', () => {
 
     it('Button caption box heading should be Login', () => {
         expect(component.display.btnCaption).toEqual('Login');
+    });
+
+    it('User name has placeholder of Username', () => {
+        const input = fixture.nativeElement.querySelector('#username') as HTMLInputElement;
+        console.log('input: ', input);
+        expect(input.placeholder).toEqual('Username');
+    });
+
+    it('Password Input has placeholder of Password', () => {
+        const input = fixture.nativeElement.querySelector('#password') as HTMLInputElement;
+        expect(input.placeholder).toEqual('Password');
     });
 });

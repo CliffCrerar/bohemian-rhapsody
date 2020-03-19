@@ -3,9 +3,11 @@
  */
 
 
-export interface iAppLoginForm {
-    username: string;
-    password: string;
+export class AppLoginForm {
+    constructor(
+        public username: string,
+        public password: string
+    ) { }
 }
 
 export class AppLoginModel {
@@ -15,6 +17,6 @@ export class AppLoginModel {
         public btnCaption: string,
         public subTitle: string,
         public loginLoader: boolean,
-        public loginForm: iAppLoginForm,
+        public loginForm: AppLoginForm
     ) { }
 }

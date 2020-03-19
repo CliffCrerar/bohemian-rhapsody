@@ -11,7 +11,8 @@
         "nabster",
         "primeng",
         "src",
-        "uikit"
+        "uikit",
+        "uuidv"
     ],
     "javascript.implicitProjectConfig.experimentalDecorators": true,
     "importCost.showCalculatingDecoration": true,
