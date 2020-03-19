@@ -1,5 +1,7 @@
 ![](https://raw.githubusercontent.com/CliffCrerar/bohemian-rhapsody/master/src/assets/img/bhpic.jpeg)
 
+![Labeler](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Labeler/badge.svg?branch=dev)
+
 # A full stack demo application
 
 About this application
