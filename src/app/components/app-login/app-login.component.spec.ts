@@ -1,18 +1,28 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpService } from '../../services/http.service';
 import { AppLoginComponent } from './app-login.component';
-import { Test } from 'tslint';
+import { AuthService } from '../../services/auth.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 describe('AppLoginComponent', () => {
     let component: AppLoginComponent;
+    let auth: AuthService;
     let fixture: ComponentFixture<AppLoginComponent>;
-
+    let http: HttpService;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [AppLoginComponent]
+            declarations: [AppLoginComponent],
+            providers: [AuthService, HttpService],
+            imports: [FormsModule, HttpClientModule]
         })
             .compileComponents();
+        auth = TestBed.inject(AuthService);
+        http = TestBed.inject(HttpService);
+
     }));
 
     beforeEach(() => {
@@ -46,7 +56,6 @@ describe('AppLoginComponent', () => {
 
     it('User name has placeholder of Username', () => {
         const input = fixture.nativeElement.querySelector('#username') as HTMLInputElement;
-        console.log('input: ', input);
         expect(input.placeholder).toEqual('Username');
     });
 
@@ -54,4 +63,13 @@ describe('AppLoginComponent', () => {
         const input = fixture.nativeElement.querySelector('#password') as HTMLInputElement;
         expect(input.placeholder).toEqual('Password');
     });
+
+    it('Auth service should be defined', () => {
+        expect(auth).toBeDefined();
+    });
+
+    it('Http service should be defined', () => {
+        expect(http).toBeDefined();
+    });
+
 });

@@ -20,6 +20,7 @@ import { MLBackgroundCreditComponent } from './components/_static/image-credit';
         MLBackgroundCreditComponent
     ],
     imports: [
+
         BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,

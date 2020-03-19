@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppLoginModel, AppLoginForm } from '../../models/app-login.model';
+import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
     selector: 'app-app-login',
@@ -16,7 +18,7 @@ export class AppLoginComponent implements OnInit {
     public display: AppLoginModel;
     public loginForm: AppLoginForm;
     /* Constructor */
-    constructor() {
+    constructor(http: HttpClient, auth: AuthService) {
         this.loginForm = new AppLoginForm(null, null);
         this.display = new AppLoginModel(
             this._appTitle,
@@ -26,10 +28,12 @@ export class AppLoginComponent implements OnInit {
             this._loginLoader,
             this.loginForm
         );
+        auth.httpPost = http.post;
     }
 
     /* Hooks */
     ngOnInit(): void {
+
     }
 
 
@@ -39,7 +43,4 @@ export class AppLoginComponent implements OnInit {
     ngOnSubmit() {
 
     }
-
-
-
 }
