@@ -5,7 +5,11 @@
 const PROXY_CONFIG = [
     {
         context: [
-            '/api'
+            '/users',
+            '/artist',
+            '/albums',
+            '/data',
+            '/genre'
         ],
         target: 'http://localhost:3000',
     },
@@ -19,7 +23,6 @@ const PROXY_CONFIG = [
 ].map(conf => ({
     ...conf,
     secure: false,
-    pathRewrite: { '^/api/*': '/*' },
     changeOrigin: true
 }))
 

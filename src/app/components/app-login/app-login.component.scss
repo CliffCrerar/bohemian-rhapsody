@@ -1,0 +1,29 @@
+/**
+    Login style sheet
+*/
+
+.login-card {
+  margin: auto;
+}
+
+.login-bg {
+  height: 100vh;
+  width: 100vw;
+  background: url("../../../assets/img/marcela-laskoski.jpg") center center / 110% auto no-repeat;
+}
+
+.uk-card {
+  margin: auto;
+  max-width: 340px;
+  min-width: 180px;
+}
+
+.uk-container-xsmall {
+  margin: auto;
+}
+
+@media screen and (max-width: 1050px) {
+  .login-bg {
+    background: url("../../../assets/img/marcela-laskoski.jpg") center center / auto 110% no-repeat;
+  }
+}

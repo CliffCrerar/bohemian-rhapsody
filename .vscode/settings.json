@@ -1,8 +1,20 @@
 {
     "docker.defaultRegistryPath": "cliffenator",
     "cSpell.words": [
+        "Lakoski",
         "Microservice",
-        "nabster"
+        "assets",
+        "css",
+        "laskoski",
+        "lib",
+        "marcela",
+        "nabster",
+        "primeng",
+        "src",
+        "testname",
+        "testpassword",
+        "uikit",
+        "uuidv"
     ],
     "javascript.implicitProjectConfig.experimentalDecorators": true,
     "importCost.showCalculatingDecoration": true,

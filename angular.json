@@ -10,7 +10,7 @@
                     "style": "scss"
                 }
             },
-            "root": ".",
+            "root": "./",
             "sourceRoot": "src",
             "prefix": "app",
             "architect": {
@@ -29,11 +29,12 @@
                         ],
                         "styles": [
                             "src/styles.scss",
-                            "node_modules/primeicons/primeicons.css",
-                            "node_modules/primeng/resources/themes/nova-light/theme.css",
-                            "node_modules/primeng/resources/primeng.min.css"
+                            "src/assets/lib/uikit/uikit.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "src/assets/lib/uikit/uikit.js",
+                            "src/assets/lib/uikit/uikit-icons.js"
+                        ]
                     },
                     "configurations": {
                         "production": {
