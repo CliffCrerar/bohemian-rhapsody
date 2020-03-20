@@ -15,8 +15,7 @@ const PROXY_CONFIG = [
     },
     {
         context: [
-            '/',
-            'login'
+            '/login'
         ],
         target: 'http://localhost:3000',
     }

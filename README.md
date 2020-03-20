@@ -1,34 +1,48 @@
-![](https://raw.githubusercontent.com/CliffCrerar/bohemian-rhapsody/master/src/assets/img/bhpic.jpeg)
+![Bo Raps Image](https://raw.githubusercontent.com/CliffCrerar/bohemian-rhapsody/master/src/assets/img/bhpic.jpeg)
+
+# Full stack end to end solution
 
 ![Labeler](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Labeler/badge.svg?branch=dev)
 ![Labeler](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Labeler/badge.svg?branch=dev&event=page_build)
 
 # A full stack demo application
 
-About this application
+Runs with fully automated CI/CD pipeline 'git push -> stage -> test-build -> run-test -> prod-build -> release'. 
 
-## To run this app
+Full MEAN stack application embeded in google cloud platform.
+
+Deployed from github.
 
 ### Prerequisites
 
 1. Nodejs
+2. GIT
+4. NPM
+
+> For deployment to `gcloud run`.
+
 2. Docker desktop
-3. Docker hub account
-4. Azure CLI
+2. gcloud SDK
 
-npm i mysql
+### Resources
 
-docker run --privileged -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<>' -p 1433:1433 --name=MSSQL -d mcr.microsoft.com/mssql/server:2019-latest
+#### Application stack
 
-cmd connect mongo "mongodb+srv://google-mongo-2pvom.mongodb.net/test"  --username <username>
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) with [Mongoose](https://mongoosejs.com/)
+- [Express.js](Express.js)
+- [Angular](https://angular.io/) with [UIKit](https://getuikit.com/) (Not Angular.js)
+- [Node.js](https://nodejs.org/en/)
 
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://<username>:<password>@google-mongo-2pvom.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+> MEAN Stack
 
-mongodb+srv://<username>:<password>@google-mongo-2pvom.mongodb.net/test?retryWrites=true&w=majority
+#### API
+
+- [Nabster Music API](https://developer.napster.com/)
+
+#### Devops pipe
+
+- [Github](https://github.com/)
+- [Gloud build](https://cloud.google.com/cloud-build)
+- [Gcloud run](https://cloud.google.com/run)
+
+

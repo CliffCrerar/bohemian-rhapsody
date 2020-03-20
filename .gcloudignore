@@ -1,0 +1,11 @@
+.env
+.gitignore
+.editorconfig
+.node_modules
+dist
+github
+.vscode
+.wiki
+LICENSE
+package-lock.json
+tslint.json
