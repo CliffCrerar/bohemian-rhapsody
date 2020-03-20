@@ -1,21 +1,9 @@
 substitutions:
-  - _SERVICE_NAME: 'bo-raps'
-  - _PROJECT_ID: 'boraps'
-  - _REGION: 'us-central1'
+  _SERVICE_NAME: 'test-app'
+  _PROJECT_ID: 'boraps'
+  _REGION: 'us-central1'
 
 steps:
-    # Build the project
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['npm', 'install', '@angular/cli']
-    # Install dependencies
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['npm','install']
-    # Run project tests
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['npm', 'run', 'test-headless']
-    # build the container image
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['npm', 'run', 'build']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$_PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA', '.']
     # push the container image to Container Registry

@@ -2,8 +2,8 @@
 
 # Full stack end to end solution
 
-![Labeler](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Labeler/badge.svg?branch=dev)
-![Labeler](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Labeler/badge.svg?branch=dev&event=page_build)
+![Master Branch](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Labeler/badge.svg?branch=master)
+![Pipeline Test Branch](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Labeler/badge.svg?branch=dev&event=pipeline-test)
 
 # A full stack demo application
 
@@ -19,7 +19,7 @@ Deployed from github.
 2. GIT
 4. NPM
 
-> For deployment to `gcloud run`.
+> For deployment to `Googl Cloud run`.
 
 2. Docker desktop
 2. gcloud SDK
@@ -45,4 +45,4 @@ Deployed from github.
 - [Gloud build](https://cloud.google.com/cloud-build)
 - [Gcloud run](https://cloud.google.com/run)
 
-
+#### `npm` scripts

@@ -1,7 +1,7 @@
 .env
 .gitignore
 .editorconfig
-.node_modules
+node_modules
 dist
 github
 .vscode
