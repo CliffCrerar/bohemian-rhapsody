@@ -12,9 +12,11 @@
         "start": "ts-node index",
         "dev:server": "nodemon --exec ts-node index",
         "test:server": "jest",
+        "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
         "gcloud:make-container": "gcloud builds submit --tag gcr.io/boraps/test-cloud-deploy",
         "gcloud:deploy": "gcloud run deploy --image gcr.io/boraps/test-cloud-deploy --platform managed",
-        "docker-build": "docker build . -t cliffenator/bohemian-rhaps-demo-music-app --allow-"
+        "docker-build": "docker build . -t cliffenator/bohemian-rhaps-demo-music-app",
+        "test": "npm run test-headless && npm run e2e"
     },
     "private": true,
     "nodemonConfig": {
@@ -39,6 +41,7 @@
         "dotenv": "^8.2.0",
         "inquirer": "^5.2.0",
         "moment": "^2.24.0",
+        "mongoose": "^5.9.5",
         "n": "^6.4.0",
         "normalize-port": "^1.0.0",
         "rxjs": "~6.5.4",
