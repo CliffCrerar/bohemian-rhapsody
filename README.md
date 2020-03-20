@@ -2,9 +2,16 @@
 
 # Full stack end to end solution
 
-Runs full
+![Labeler](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Labeler/badge.svg?branch=dev)
+![Labeler](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Labeler/badge.svg?branch=dev&event=page_build)
 
-## To run this app
+# A full stack demo application
+
+Runs with fully automated CI/CD pipeline 'git push -> stage -> test-build -> run-test -> prod-build -> release'. 
+
+Full MEAN stack application embeded in google cloud platform.
+
+Deployed from github.
 
 ### Prerequisites
 
