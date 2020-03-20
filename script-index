@@ -1,0 +1,15 @@
+ng
+dev:app
+build
+test:app
+lint
+e2e
+start
+dev:server
+test:server
+test-headless
+gcloud:test-container
+gcloud:prod-container
+gcloud:deploy
+docker-build
+test

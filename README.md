@@ -46,3 +46,23 @@ Deployed from github.
 - [Gcloud run](https://cloud.google.com/run)
 
 #### `npm` scripts
+
+`npm run <script>`
+
+|Script|Description|
+|:---------:|:---------------------------------------------|
+| `ng`| Angular CLI commmand |
+| `dev:app` | Start the Angular development server on port 4200 |
+| `build` | Build the Angular application |
+| `test:app` | Start the Angular testing app |
+| `lint` | Lint the whole application |
+| `e2e` | Run application end to end |
+| `start`* | Start the express server that serves a built application |
+| `dev:server` | Start the express server in dev mode with nodemon |
+| `test:server` | (Not implemented) Start serverside tests |
+| `test-headless` | Run tests in headless browser without watch mode |
+| `gcloud:test-container` | Build container and submit to gcloud container registry |
+| `gcloud:prod-container` | Build container and submit to gcloud container registry |
+| `gcloud:deploy` | Deploy the submitted container to cloud run |
+| `docker-build` | Build container locally |
+| `test`* | Run the end to end script |
