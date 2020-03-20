@@ -15,8 +15,9 @@
         "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
         "gcloud:test-container": "gcloud builds submit --tag gcr.io/boraps/test-app",
         "gcloud:prod-container": "gcloud builds submit --tag gcr.io/boraps/prod-app",
-        "gcloud:deploy": "gcloud run deploy --image gcr.io/boraps/test-cloud-deploy --platform managed",
-        "docker-build": "docker build . -t cliffenator/bohemian-rhaps-demo-music-app",
+        "gcloud:test-deploy": "gcloud run deploy --image gcr.io/boraps/test-app --platform managed",
+        "gcloud:prod-deploy": "gcloud run deploy --image gcr.io/boraps/prod-app --platform managed",
+        "docker-build": "docker build . -t cliffenator/test-app",
         "test": "npm run test-headless && npm run e2e"
     },
     "private": true,

@@ -3,6 +3,9 @@
 # "Build from node:12-slim image"
 FROM node:12-slim
 
+ENV MONGOUSER=$MONGOUSER
+ENV MONGOPW=$MONGOPW
+ENV MONGOHOST=$MONGOHOST
 # Set working directory
 WORKDIR /usr/src/app
 # Copy package file
