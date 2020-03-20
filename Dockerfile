@@ -20,7 +20,6 @@ COPY . ./
 # Build prod application
 RUN npm run build
 # Remove angular CLI
-RUN npm remove @angular/cli
 # Remove Headless tests
 # RUN npm install --save chromium-binary
 # Expose port

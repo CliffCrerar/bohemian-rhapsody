@@ -9,8 +9,10 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 env.config();
+const { MONGOHOST: host, MONGOPASSWORD: pw, MONGOUSER: usr } = process.env;
 
-mongoose.connect(process.env.MONGODB, { useUnifiedTopology: true });
+const mongoUri = `mongodb+srv://${usr}:${pw}@${host}/boraps`;
+mongoose.connect(mongoUri, { useUnifiedTopology: true });
 
 const usersSchema = new Schema({
     username: String,
