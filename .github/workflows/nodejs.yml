@@ -1,0 +1,50 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ pipeline-test ]
+  pull_request:
+    branches: [ stage ]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm install @angular/cli -g
+    - run: npm test
+      env:
+        CI: true
+
+  pull_request:
+    needs: test
+    steps:
+    - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+    - name: Update AUTHORS
+      run: |
+        git log --format='%aN <%aE>%n%cN <%cE>' | sort -u > AUTHORS
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v2.4.4
+      with:
+        title: Testing past pull request
+        assignees: cliff.crerar@gmail.com
+        branch: master
+        base: pipeline-test
+        token: ${{ secrets.PR_TOKEN }}
+
