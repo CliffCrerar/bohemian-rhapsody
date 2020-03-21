@@ -7,6 +7,9 @@ steps:
     # TEST THE APPLICATION
   - name: 'node'
     entrypoint: 'npm'
+    args: ['install','chrome','-g']
+  - name: 'node'
+    entrypoint: 'npm'
     args: ['install']
   - name: 'node'
     entrypoint: 'npm'
