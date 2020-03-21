@@ -3,7 +3,7 @@
 
 name: Node.js CI
 
-on:
+on: 
   push:
     branches: [dev]
   pull_request:
@@ -34,17 +34,6 @@ jobs:
 
     needs: test
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Update AUTHORS
-        run: |
-          git log --format='%aN <%aE>%n%cN <%cE>' | sort -u > AUTHORS
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v2.4.4
-        with:
-          title: Testing past pull request
-          assignees: cliff.crerar@gmail.com
-          branch: stage
-          base: dev
-          token: ${{ secrets.PR_TOKEN }}
+      - name: Github Pull Request
+        uses: repo-sync/pull-request@state
+    
