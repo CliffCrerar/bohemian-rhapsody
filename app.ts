@@ -11,10 +11,14 @@ import { createReadStream } from 'fs'
 const app = express()
 
 app.use((req, res: Response<any>, next: NextFunction) => {
-    console.table(req.headers);
-    console.log('COOKIES:', req.cookies);
-    console.log('COOKIES:', req.signedCookies);
-    console.log('PATH:', req.path);
+    const { path, headers } = req;
+    const { statusCode: stat } = res;
+    const { host, connection, ['sec-fetch-dest']: secFetchDest } = headers;
+    // console.log(stat, ': PATH:', path, '\t\t\tHOST:', host, 'CONNECTION:', connection, 'SEC-FETCH-DEST', secFetchDest);
+    console.log('STATUS:', stat, ': PATH:', path, ' - TYPE - ', secFetchDest);
+    // console.log('COOKIES:', req.cookies);
+    // console.log('COOKIES:', req.signedCookies);
+
     next();
 });
 

@@ -14,6 +14,8 @@ const development = process.env.NODE_ENV === 'development';
 
 const port = normalize(process.env.PORT || 3000);
 
+app.use(api);
+
 app.listen(port, () => logAppStart(os.hostname(), port));
 
 function logAppStart($host, $port) {
