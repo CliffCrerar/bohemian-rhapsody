@@ -34,7 +34,7 @@ jobs:
 
         needs: test
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v1
             - name: pull-request
               uses: repo-sync/pull-request@v2
               with:
