@@ -15,7 +15,7 @@
         "gcloud": "gcloud builds submit --tag gcr.io/boraps/music-app",
         "deploy": "gcloud run deploy --image gcr.io/boraps/music-app --platform managed",
         "local": "docker build . -t cliffenator/music-app",
-        "test": "npm run test-headless && npm run e2e"
+        "test": "npm run test:headless && npm run e2e"
     },
     "private": true,
     "nodemonConfig": {
