@@ -4,6 +4,7 @@
 
 import env from 'dotenv';
 import { app } from './app';
+import { api } from './src/api'
 import normalize from 'normalize-port';
 import os from 'os';
 
@@ -12,6 +13,8 @@ env.config();
 const development = process.env.NODE_ENV === 'development';
 
 const port = normalize(process.env.PORT || 3000);
+
+app.use(api);
 
 app.listen(port, () => logAppStart(os.hostname(), port));
 

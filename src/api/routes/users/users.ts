@@ -13,7 +13,7 @@ const User = mongoose.model('User', usersSchema);
 const USER = new User({
     _id: mongoose.Types.ObjectId(),
     username: 'cliff',
-    password: 'poes'
+    password: 'paswd'
 })
     .save()
     .then(

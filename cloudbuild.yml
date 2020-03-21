@@ -1,9 +1,11 @@
 substitutions:
-  _SERVICE_NAME: 'test-app'
+  _SERVICE_NAME: 'music-app'
   _PROJECT_ID: 'boraps'
   _REGION: 'us-central1'
 
 steps:
+    # TEST THE APPLICATION
+    # Build container
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$_PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA', '.']
     # push the container image to Container Registry

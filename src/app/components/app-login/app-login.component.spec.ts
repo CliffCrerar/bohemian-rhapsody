@@ -77,10 +77,6 @@ describe('AppLoginComponent', () => {
     it('Password Input has placeholder of Password', () => {
         expect(passwordInput.placeholder).toEqual('Password');
     });
-
-    xit('Auth service should be defined', () => {
-        // expect(component).toEqual(auth);
-    });
 });
 
 
