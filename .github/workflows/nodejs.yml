@@ -31,8 +31,9 @@ jobs:
         CI: true
 
   pull_request:
+
     runs-on: ubuntu-latest
-    # Create a pull Request
+
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v2.4.4
       if: $CI
