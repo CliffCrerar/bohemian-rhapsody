@@ -20,5 +20,20 @@
     ],
     "javascript.implicitProjectConfig.experimentalDecorators": true,
     "importCost.showCalculatingDecoration": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": true,
+            "strings": true
+        },
+        "editor.autoIndent": "full"
+    },
+    "yaml.format.singleQuote": true,
+    "yaml.trace.server": "messages",
+    "[github-actions]": {
+        "editor.wordBasedSuggestions": true
+    }
 }
