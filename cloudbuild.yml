@@ -5,7 +5,8 @@ substitutions:
 
 steps:
     # TEST THE APPLICATION
-  - name: 'npm'
+  - name: 'node'
+    entrypoint: 'npm'
     args: ['run','test']
     # Build container
   - name: 'gcr.io/cloud-builders/gcloud'
