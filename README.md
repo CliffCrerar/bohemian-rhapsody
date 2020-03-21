@@ -1,5 +1,7 @@
 ![Bo Raps Image](https://raw.githubusercontent.com/CliffCrerar/bohemian-rhapsody/master/src/assets/img/bhpic.jpeg)
 
+![Node.js CI](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Node.js%20CI/badge.svg)
+
 # Full stack end to end solution
 
 ![Master Branch](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Labeler/badge.svg?branch=master)

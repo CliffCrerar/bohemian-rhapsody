@@ -7,7 +7,7 @@ on:
   push:
     branches: [ pipeline-test ]
   pull_request:
-    branches: [ master ]
+    branches: [ stage ]
 
 jobs:
   build:
@@ -29,7 +29,17 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - run: gcloud config set project boraps
-    - run: npm run gcloud:build
-    - run: npm run gcloud:deploy
       env:
         CI: true
+
+SUCCESS
+    # Create a pull Request
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v2.4.4
+        with:
+            title: Testing past pull request
+            assignees: cliff.crerar@gmail.com
+            branch: master
+            base: dev
+            token: ${{ secrets.PR_TOKEN }}
+
