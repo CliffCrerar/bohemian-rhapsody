@@ -11,7 +11,7 @@ steps:
   - name: 'node'
     entrypoint: 'npm'
     args: ['install']
-  - name: 'node'
+  - name: 'ubuntu'
     entrypoint: 'npm'
     args: ['run','test']
     # Build container
