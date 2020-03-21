@@ -11,22 +11,15 @@ WORKDIR /usr/src/app
 # Copy package file
 COPY package*.json ./
 # Install node modules
-RUN npm install
+RUN npm ci
 
-# Install Chrome binary for testing
-# RUN npm install --save chromium-binary
 # Copy files
 COPY . ./
-# Run tests in headless mode
-# RUN npm run test-headless
-# Build prod application
+
 RUN npm run build
-# Remove angular CLI
-# Remove Headless tests
-# RUN npm install --save chromium-binary
+
 # Expose port
 EXPOSE 3000
 
-# EXPORT 9876
 # Start application
 CMD [ "npm", "start" ]
