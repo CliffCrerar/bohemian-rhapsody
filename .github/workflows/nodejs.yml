@@ -28,6 +28,7 @@ jobs:
     - run: npm install @angular/cli -g
     - run: npm run build --if-present
     - run: npm test
+    - run: gcloud config set project boraps
     - run: npm run gcloud:build
     - run: npm run gcloud:deploy
       env:
