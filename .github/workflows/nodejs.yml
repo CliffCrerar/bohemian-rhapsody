@@ -3,37 +3,36 @@
 
 name: Node.js CI
 
-on: 
-  push:
-    branches: [dev]
-  pull_request:
-    branches: [stage]
+on:
+    push:
+        branches: [dev]
+    pull_request:
+        branches: [stage]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+    test:
+        runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x]
+        strategy:
+            matrix:
+                node-version: [12.x]
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm install @angular/cli -g
-      - run: npm test
-        env:
-          CI: "true"
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+              #- run: npm ci
+              #- run: npm install @angular/cli -g
+              #- run: npm test
+              env:
+                  CI: 'true'
 
-  pull_request:
-    runs-on: ubuntu-latest
+    pull_request:
+        runs-on: ubuntu-latest
 
-    needs: test
-    steps:
-      - name: Github Pull Request
-        uses: repo-sync/pull-request@state
-    
+        needs: test
+        steps:
+            - name: Github Pull Request
+              uses: repo-sync/pull-request@state
