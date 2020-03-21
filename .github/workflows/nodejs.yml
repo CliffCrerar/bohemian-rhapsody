@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ pipeline-test ]
+    branches: [ dev ]
   pull_request:
     branches: [ stage ]
 
@@ -32,13 +32,14 @@ jobs:
 
   pull_request:
     needs: test
-      steps:
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v2.4.4
-          with:
-              title: Testing past pull request
-              assignees: cliff.crerar@gmail.com
-              branch: master
-              base: pipeline-test
-              token: ${{ secrets.PR_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v2.4.4
+      with:
+        title: Testing past pull request
+        assignees: cliff.crerar@gmail.com
+        branch: master
+        base: pipeline-test
+        token: ${{ secrets.PR_TOKEN }}
 
