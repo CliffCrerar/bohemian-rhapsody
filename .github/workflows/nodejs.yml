@@ -41,6 +41,6 @@ jobs:
             title: Testing past pull request
             assignees: cliff.crerar@gmail.com
             branch: master
-            base: dev
+            base: pipeline-test
             token: ${{ secrets.PR_TOKEN }}
 
