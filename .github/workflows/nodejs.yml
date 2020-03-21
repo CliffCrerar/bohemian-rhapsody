@@ -23,9 +23,9 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
-              #- run: npm ci
-              #- run: npm install @angular/cli -g
-              #- run: npm test
+            - run: npm ci
+            - run: npm install @angular/cli -g
+            - run: npm test
               env:
                   CI: 'true'
 
@@ -34,5 +34,10 @@ jobs:
 
         needs: test
         steps:
-            - name: Github Pull Request
-              uses: repo-sync/pull-request@state
+            - uses: actions/checkout@v2
+            - name: pull-request
+              uses: repo-sync/pull-request@v2
+              with:
+                  source_branch: 'dev' # If blank, default: triggered branch
+                  destination_branch: 'stage'
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
