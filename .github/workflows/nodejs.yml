@@ -4,42 +4,40 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [ dev ]
-  pull_request:
-    branches: [ stage ]
+    push:
+        branches: [dev]
+    pull_request:
+        branches: [stage]
 
 jobs:
-  test:
+    test:
+        runs-on: ubuntu-latest
 
-    runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [12.x]
 
-    strategy:
-      matrix:
-        node-version: [12.x]
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - run: npm ci
+            - run: npm install @angular/cli -g
+            - run: npm test
+              env:
+                  CI: 'true'
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm install @angular/cli -g
-    - run: npm test
-      env:
-        CI: true
+    pull_request:
+        runs-on: ubuntu-latest
 
-  pull_request:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v2.4.4
-      with:
-        title: Testing past pull request
-        assignees: cliff.crerar@gmail.com
-        branch: master
-        base: pipeline-test
-        token: ${{ secrets.PR_TOKEN }}
-
+        needs: test
+        steps:
+            - uses: actions/checkout@v1
+            - name: pull-request
+              uses: repo-sync/pull-request@v2
+              with:
+                  source_branch: 'dev' # If blank, default: triggered branch
+                  destination_branch: 'stage'
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
