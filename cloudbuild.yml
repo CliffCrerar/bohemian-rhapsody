@@ -8,10 +8,10 @@ steps:
   - name: 'npm'
     args: ['run','test']
     # Build container
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/gcloud'
     args: ['build', '-t', 'gcr.io/$_PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA', '.']
     # push the container image to Container Registry
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/gcloud'
     args: ['push', 'gcr.io/$_PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA']
     # Deploy container image to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
