@@ -4,6 +4,7 @@
 
 import env from 'dotenv';
 import { app } from './app';
+import { api } from './src/api'
 import normalize from 'normalize-port';
 import os from 'os';
 

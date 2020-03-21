@@ -27,5 +27,7 @@ RUN npm run build
 # RUN npm install --save chromium-binary
 # Expose port
 EXPOSE 3000
+
+# EXPORT 9876
 # Start application
 CMD [ "npm", "start" ]
