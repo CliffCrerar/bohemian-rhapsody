@@ -5,15 +5,6 @@ substitutions:
 
 steps:
     # TEST THE APPLICATION
-  - name: 'node'
-    entrypoint: 'npm'
-    args: ['install','chrome','-g']
-  - name: 'node'
-    entrypoint: 'npm'
-    args: ['install']
-  - name: 'ubuntu'
-    entrypoint: 'npm'
-    args: ['run','test']
     # Build container
   - name: 'gcr.io/cloud-builders/gcloud'
     args: ['build', '-t', 'gcr.io/$_PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA', '.']

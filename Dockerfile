@@ -12,8 +12,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 # Install node modules
 RUN npm install
-# Install Angular cli
-RUN npm install @angular/cli
+
 # Install Chrome binary for testing
 # RUN npm install --save chromium-binary
 # Copy files
