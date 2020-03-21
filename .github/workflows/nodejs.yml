@@ -31,6 +31,7 @@ jobs:
         CI: true
 
   pull_request:
+    runs-on: [ubuntu-latest]
     needs: test
     steps:
       - name: Create Pull Request
