@@ -12,8 +12,8 @@
         "dev:server": "nodemon --exec ts-node index",
         "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
         "test:dev": "ng test",
-        "gcloud": "gcloud builds submit --tag gcr.io/boraps/music-app",
-        "deploy": "gcloud run deploy --image gcr.io/boraps/music-app --platform managed",
+        "gcloud-build": "gcloud builds submit --tag gcr.io/boraps/music-app",
+        "gcloud-deploy": "gcloud run deploy --image gcr.io/boraps/music-app --platform managed",
         "local": "docker build . -t cliffenator/music-app",
         "test": "npm run test:headless && npm run e2e"
     },

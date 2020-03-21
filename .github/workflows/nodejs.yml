@@ -28,5 +28,6 @@ jobs:
     - run: npm install @angular/cli -g
     - run: npm run build --if-present
     - run: npm test
-      env:
+    - run: npm gcloud-build
+      env: npm gcloud-deploy
         CI: true
