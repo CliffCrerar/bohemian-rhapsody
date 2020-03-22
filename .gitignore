@@ -47,3 +47,5 @@ www
 Thumbs.db
 .wiki
 ./src/api/logs/*.txt
+.env
+_ copy.env
