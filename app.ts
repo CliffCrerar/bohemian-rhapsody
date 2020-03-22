@@ -28,9 +28,6 @@ app.get(['/', '/login'], (req, res) =>
     createReadStream(resolve('dist/app/index.html'))
         .pipe(res.set('Content-Type', 'text/html').status(200)))
 
-
-
-
 // app.use(appRoutes[1], usersRouter);
 // app.use(appRoutes[2], albumsRouter);
 // app.use(appRoutes[3], artistRouter);
