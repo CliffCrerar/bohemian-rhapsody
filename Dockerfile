@@ -2,7 +2,7 @@
 
 # "Build from node:12-slim image"
 FROM node:12-slim
-
+# Environment variables
 ENV MONGOUSER=$MONGOUSER
 ENV MONGOPW=$MONGOPW
 ENV MONGOHOST=$MONGOHOST
@@ -12,14 +12,11 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 # Install node modules
 RUN npm ci
-
 # Copy files
 COPY . ./
-
+# Run build
 RUN npm run build
-
 # Expose port
 EXPOSE 3000
-
 # Start application
 CMD [ "npm", "start" ]
