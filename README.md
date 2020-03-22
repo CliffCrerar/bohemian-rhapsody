@@ -1,11 +1,7 @@
 ![Bo Raps Image](https://raw.githubusercontent.com/CliffCrerar/bohemian-rhapsody/master/src/assets/img/bhpic.jpeg)
 
-![Node.js CI](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Node.js%20CI/badge.svg)
-
-# Full stack end to end solution
-
-![Master Branch](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Labeler/badge.svg?branch=master)
-![Pipeline Test Branch](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Labeler/badge.svg?branch=dev&event=pipeline-test)
+![Pull Into Stage](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Pull%20Into%20Stage/badge.svg?branch=dev)
+![Stage Test](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Stage%20Test/badge.svg?branch=stage)
 
 # A full stack demo application
 
@@ -53,18 +49,21 @@ Deployed from github.
 
 |Script|Description|
 |:---------:|:---------------------------------------------|
-| `ng`| Angular CLI commmand |
+
 | `dev:app` | Start the Angular development server on port 4200 |
 | `build` | Build the Angular application |
-| `test:app` | Start the Angular testing app |
-| `lint` | Lint the whole application |
-| `e2e` | Run application end to end |
-| `start`* | Start the express server that serves a built application |
+
+| `lint`    | Lint the whole application |
+| `e2e`     | Run application end to end |
+| `start`*  | Start the express server that serves a built application |
 | `dev:server` | Start the express server in dev mode with nodemon |
 | `test:server` | (Not implemented) Start serverside tests |
-| `test-headless` | Run tests in headless browser without watch mode |
+| `test:headless` | Run tests in headless browser without watch mode |
+| `test:dev` | run testing during development in watch mode |
+| `gcloud:build`| Build container and submit to gcloud container registry |
+| `gcloud:deploy`| Build container and submit to gcloud container registry |
 | `gcloud:test-container` | Build container and submit to gcloud container registry |
 | `gcloud:prod-container` | Build container and submit to gcloud container registry |
 | `gcloud:deploy` | Deploy the submitted container to cloud run |
-| `docker-build` | Build container locally |
+| `local` | Build container locally |
 | `test`* | Run the end to end script |
