@@ -5,7 +5,7 @@
     "scripts": {
         "ng": "ng",
         "dev:app": "ng serve --aot=true --prod=false --commonChunk=false --hmr=true --open=true --optimization=false --proxyConfig=src/proxy-config.js --sourceMap=true --verbose=false",
-        "build": "ng build --aot=true --prod=true",
+        "build": "ng build --aot=true --prod=true --buildOptimizer=true --extractCss=true --extractLicenses=true",
         "lint": "ng lint",
         "e2e": "ng e2e",
         "start": "ts-node index",
