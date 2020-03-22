@@ -49,10 +49,8 @@ Deployed from github.
 
 |Script|Description|
 |:---------:|:---------------------------------------------|
-
 | `dev:app` | Start the Angular development server on port 4200 |
 | `build` | Build the Angular application |
-
 | `lint`    | Lint the whole application |
 | `e2e`     | Run application end to end |
 | `start`*  | Start the express server that serves a built application |

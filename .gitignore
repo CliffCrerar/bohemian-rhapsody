@@ -44,6 +44,7 @@ www
 
 # System Files
 .DS_Store
+.DS_Store
 Thumbs.db
 .wiki
 ./src/api/logs/*.txt
