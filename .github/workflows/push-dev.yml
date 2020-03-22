@@ -1,0 +1,18 @@
+name: Pull Into Stage
+
+on:
+    push:
+        branches: [dev]
+
+jobs:
+    pr_to_stage:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v1
+            - name: pull-request
+              uses: repo-sync/pull-request@v2
+              with:
+                  source_branch: 'dev' # If blank, default: triggered branch
+                  destination_branch: 'stage'
+                  github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "docker.defaultRegistryPath": "cliffenator",
+        "javascript.implicitProjectConfig.experimentalDecorators": true,
+        "yaml.format.singleQuote": true,
+        "yaml.trace.server": "messages"
+    }
+}
