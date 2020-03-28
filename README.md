@@ -70,5 +70,4 @@ Deployed from github.
 ####by Stack Share
 
 <iframe frameborder="0" data-theme="dark" data-layers="1,2,3,4" data-stack-embed="true" href="https://embed.stackshare.io/stacks/embed/89e19b77f1c323c55bcf7b90d0f8d5"/>
-<script async src="https://cdn1.stackshare.io/javascripts/client-code.js" charset="utf-8"></script>
-</iframe>
+</iframe><script async src="https://cdn1.stackshare.io/javascripts/client-code.js" charset="utf-8"></script>
