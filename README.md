@@ -1,5 +1,5 @@
 ![Bo Raps Image](https://raw.githubusercontent.com/CliffCrerar/bohemian-rhapsody/master/src/assets/img/bhpic.jpeg)
-
+[![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/CliffCrerar/bohemian-rhapsody)
 ![Pull Into Stage](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Pull%20Into%20Stage/badge.svg?branch=dev)
 ![Stage Test](https://github.com/CliffCrerar/bohemian-rhapsody/workflows/Stage%20Test/badge.svg?branch=stage)
 
@@ -65,3 +65,10 @@ Deployed from github.
 | `gcloud:deploy` | Deploy the submitted container to cloud run |
 | `local` | Build container locally |
 | `test`* | Run the end to end script |
+
+## Tech Stack 
+#### by Stack Share
+
+
+[](https://embed.stackshare.io/stacks/embed/89e19b77f1c323c55bcf7b90d0f8d5)
+![](https://cdn1.stackshare.io/javascripts/client-code.js)
