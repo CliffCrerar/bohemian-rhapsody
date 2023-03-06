@@ -36,10 +36,10 @@
     "@types/http-server": "^0.10.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
-    "cookie-session": "^1.4.0",
+    "cookie-session": "^2.0.0",
     "dotenv": "^8.2.0",
     "inquirer": "^5.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "mongoose": "^5.9.5",
     "n": "^6.4.0",
     "normalize-port": "^1.0.0",
@@ -48,6 +48,7 @@
     "uuid": "^7.0.2",
     "zone.js": "~0.10.2",
     "snyk": "^1.1064.0"
+
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.6",
