@@ -48,6 +48,7 @@
     "uuid": "^7.0.2",
     "zone.js": "~0.10.2",
     "snyk": "^1.1064.0"
+
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.6",
