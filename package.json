@@ -40,7 +40,7 @@
     "dotenv": "^8.2.0",
     "inquirer": "^5.2.0",
     "moment": "^2.29.2",
-    "mongoose": "^6.4.6",
+    "mongoose": "^6.11.3",
 
     "n": "^6.4.0",
     "normalize-port": "^1.0.0",
