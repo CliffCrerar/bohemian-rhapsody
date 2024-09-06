@@ -38,9 +38,9 @@
     "cookie-parser": "^1.4.5",
     "cookie-session": "^2.0.0",
     "dotenv": "^8.2.0",
-    "inquirer": "^5.2.0",
+    "inquirer": "^9.0.0",
     "moment": "^2.29.2",
-    "mongoose": "^6.11.3",
+    "mongoose": "^8.0.0",
 
     "n": "^6.4.0",
     "normalize-port": "^1.0.0",
